@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Vedant's plot generator</title>
+    <link rel = "icon" href = "assets/icons/icon.png" type = "image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<script src="https://kit.fontawesome.com/a5c25da8f1.js" crossorigin="anonymous"></script>
+<body>
+    <head>
+        <div class="header">
+            <nav>
+                <a href="index.html"><img src="assets/icons/icon.png" alt="web page logo"></a>
+                <ul class="allChart">
+                    <li> <a href="index.html">Bar Chart</a></li>
+                    <li> <a href="doughnutchart.html">Doughnut Chart</a></li>
+                    <li class="active"> <a href="piechart.html">Pie Chart</a></li>
+                    <li> <a href="linechart.html">Line Chart</a></li>
+                    <li> <a href="polarareachart.html">Polar Area Chart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </head>
+    <br><br>
+    <div class="con"> 
+        <div class="inputs">
+            <span> Enter Labels</span>
+            <input type="text" name="pielabels" id="pielabels" placeholder= "label1,label2,label3,label4" required>
+            <br>
+            <span> Enter Value</span>
+            <input type="text" name="pievalues" id="pievalues" placeholder= "10,20,30,40" required>
+            <button onclick="javaScript:showpie()">Show</button>
+        </div>
+        <div style="display: none;" class="chart1" id="piechartdiv">
+            <canvas id="piechart" style="height: 150px; width: 150px;" ></canvas>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+<script src="script/sript.js"></script>
